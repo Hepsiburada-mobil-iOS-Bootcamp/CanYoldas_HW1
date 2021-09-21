@@ -19,6 +19,7 @@ class ViewController: UIViewController {
         guard let viewController = storyboard?.instantiateViewController(identifier: "AlgorithmViewController") else {
             fatalError("Opps there is no such viewController")
         }
+        
         self.navigationController?.pushViewController(viewController, animated: true)
         
     }

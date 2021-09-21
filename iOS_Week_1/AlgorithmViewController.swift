@@ -14,11 +14,12 @@ class AlgorithmViewController: UIViewController {
     convenience init(algorithmManager: AlgorithmProtocol) {
         self.init()
         self.algorithmManager = algorithmManager
+        
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        algorithmManager = AlgorithmManager()
         // Do any additional setup after loading the view.
     }
     
@@ -27,7 +28,7 @@ class AlgorithmViewController: UIViewController {
     }
     
     @IBAction func isPalindromAction(_ sender: Any) {
-        // call required test function
+        algorithmManager.isPalindromTest()
     }
     
     @IBAction func AnagramAction(_ sender: Any) {
