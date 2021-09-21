@@ -27,6 +27,7 @@ class AlgorithmManager: AlgorithmProtocol {
     }
     
     private func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
+        // task2 is added
         // I solved of the question for you guys :D :D :D
         // task1
         return [0, 1]
@@ -80,7 +81,7 @@ class AlgorithmManager: AlgorithmProtocol {
      Output: false
      */
     func duplicateTest() {
-        
+        //task2
     }
     
     //    func containsDuplicate(_ nums: [Int]) -> Bool {
