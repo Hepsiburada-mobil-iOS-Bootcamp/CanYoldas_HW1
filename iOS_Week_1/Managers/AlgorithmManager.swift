@@ -84,12 +84,15 @@ class AlgorithmManager: AlgorithmProtocol {
      Output: false
      */
     func duplicateTest() {
-        //task2
+        let result = containsDuplicate([1,2,3,4,1])
+        print("result : \(result)")
     }
     
-    //    func containsDuplicate(_ nums: [Int]) -> Bool {
-    //
-    //    }
+        func containsDuplicate(_ nums: [Int]) -> Bool {
+            let set = Set(nums)
+            //creating a set removes duplicated elements
+            return set.count != nums.count
+        }
     
     // MARK: - Merge Sorted Array
     /*
