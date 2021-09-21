@@ -70,10 +70,10 @@ class AlgorithmManager: AlgorithmProtocol {
         print("result : \(result)")
     }
     
-        func isAnagram(_ s: String, _ t: String) -> Bool {
-            //if both strings have the same characters sorted version must be equal
-            return s.lowercased().sorted() == t.lowercased().sorted()
-        }
+    func isAnagram(_ s: String, _ t: String) -> Bool {
+        //if both strings have the same characters sorted version must be equal
+        return s.lowercased().sorted() == t.lowercased().sorted()
+    }
     
     // MARK: - Contains Duplicate
     /*
@@ -88,11 +88,11 @@ class AlgorithmManager: AlgorithmProtocol {
         print("result : \(result)")
     }
     
-        func containsDuplicate(_ nums: [Int]) -> Bool {
-            let set = Set(nums)
-            //creating a set removes duplicated elements
-            return set.count != nums.count
-        }
+    func containsDuplicate(_ nums: [Int]) -> Bool {
+        let set = Set(nums)
+        //creating a set removes duplicated elements
+        return set.count != nums.count
+    }
     
     // MARK: - Merge Sorted Array
     /*
@@ -139,12 +139,21 @@ class AlgorithmManager: AlgorithmProtocol {
      
      */
     func missingNumberTest() {
-        
+        let result = missingNumber([3,0,1])
+        print("result : \(result)")
     }
     
-    //    private func missingNumber(_ nums: [Int]) -> Int {
-    //
-    //    }
+    private func missingNumber(_ nums: [Int]) -> Int {
+        // if next value is not equal to current value + 1 , return current value + 1
+        let ar = nums.sorted()
+        for i in 0..<ar.count - 1  {
+            
+            if ar[i+1] != ar[i] + 1 {
+                return ar[i] + 1
+            }
+        }
+        return Int()
+    }
     
     
 }
