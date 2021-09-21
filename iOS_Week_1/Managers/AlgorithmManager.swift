@@ -28,6 +28,7 @@ class AlgoruthmManager: AlgorithmProtocol {
     
     private func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
         // I solved of the question for you guys :D :D :D
+        // task1
         return [0, 1]
     }
     
