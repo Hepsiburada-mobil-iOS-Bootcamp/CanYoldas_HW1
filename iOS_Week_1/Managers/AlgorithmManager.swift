@@ -7,7 +7,7 @@
 
 import Foundation
 
-class AlgoruthmManager: AlgorithmProtocol {
+class AlgorithmManager: AlgorithmProtocol {
     
     // MARK: - Two Sum
     /*
@@ -40,12 +40,22 @@ class AlgoruthmManager: AlgorithmProtocol {
      Explanation: "amanaplanacanalpanama" is a palindrome.
      */
     func isPalindromTest() {
-        
+        //test
+        let string = "amanaplanacanalpanama"
+        let result = isPalindrome(string)
+        print("result : \(result)")
     }
     
-//    func isPalindrome(_ s: String) -> Bool {
-//
-//    }
+    func isPalindrome(_ s: String) -> Bool {
+        //replacingOccurrences removes other characters which are not in A-Z
+        let reverse = String(s.lowercased().replacingOccurrences(of: "[^a-z]+", with: "",options: .regularExpression).reversed())
+        if reverse == s {
+            return true
+        } else {
+            return false
+        }
+        
+    }
     
     // MARK: - Valid Anagram
     /*
@@ -57,9 +67,9 @@ class AlgoruthmManager: AlgorithmProtocol {
         
     }
     
-//    func isAnagram(_ s: String, _ t: String) -> Bool {
-//
-//    }
+    //    func isAnagram(_ s: String, _ t: String) -> Bool {
+    //
+    //    }
     
     // MARK: - Contains Duplicate
     /*
@@ -73,13 +83,13 @@ class AlgoruthmManager: AlgorithmProtocol {
         
     }
     
-//    func containsDuplicate(_ nums: [Int]) -> Bool {
-//            
-//    }
+    //    func containsDuplicate(_ nums: [Int]) -> Bool {
+    //
+    //    }
     
     // MARK: - Merge Sorted Array
     /*
-    
+     
      You are given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two integers m and n, representing the number of elements in nums1 and nums2 respectively.
      Merge nums1 and nums2 into a single array sorted in non-decreasing order.
      The final sorted array should not be returned by the function, but instead be stored inside the array nums1. To accommodate this, nums1 has a length of m + n, where the first m elements denote the elements that should be merged, and the last n elements are set to 0 and should be ignored. nums2 has a length of n.
@@ -94,7 +104,7 @@ class AlgoruthmManager: AlgorithmProtocol {
     }
     
     private func merge(_ nums1: inout [Int], _ m: Int, _ nums2: [Int], _ n: Int) {
-            
+        
     }
     
     // MARK: - Intersection of Two Arrays
@@ -108,26 +118,26 @@ class AlgoruthmManager: AlgorithmProtocol {
         
     }
     
-//    func intersect(_ nums1: [Int], _ nums2: [Int]) -> [Int] {
-//
-//    }
+    //    func intersect(_ nums1: [Int], _ nums2: [Int]) -> [Int] {
+    //
+    //    }
     
     // MARK: - Missing Number
     /*
      Given an array nums containing n distinct numbers in the range [0, n], return the only number in the range that is missing from the array.
-
+     
      Input: nums = [3,0,1]
      Output: 2
      Explanation: n = 3 since there are 3 numbers, so all numbers are in the range [0,3]. 2 is the missing number in the range since it does not appear in nums.
-
+     
      */
     func missingNumberTest() {
         
     }
     
-//    private func missingNumber(_ nums: [Int]) -> Int {
-//
-//    }
+    //    private func missingNumber(_ nums: [Int]) -> Int {
+    //
+    //    }
     
     
 }
