@@ -122,12 +122,24 @@ class AlgorithmManager: AlgorithmProtocol {
      Output: [2,2]
      */
     func arrayIntersectionTest() {
-        
+        let result = intersect([1,2,2,1], [2,2])
+        print("result : \(result)")
     }
     
-    //    func intersect(_ nums1: [Int], _ nums2: [Int]) -> [Int] {
-    //
-    //    }
+        func intersect(_ nums1: [Int], _ nums2: [Int]) -> [Int] {
+    
+            var result: [Int] = []
+            for i in nums1 {
+                for j in nums2 {
+                    if i == j {
+                        result.append(j)
+                        break
+                    }
+                }
+            }
+            
+            return result
+        }
     
     // MARK: - Missing Number
     /*
