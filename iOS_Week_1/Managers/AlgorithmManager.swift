@@ -57,11 +57,8 @@ class AlgorithmManager: AlgorithmProtocol {
     func isPalindrome(_ s: String) -> Bool {
         //replacingOccurrences removes other characters which are not in A-Z
         let reverse = String(s.lowercased().replacingOccurrences(of: "[^a-z]+", with: "",options: .regularExpression).reversed())
-        if reverse == s {
-            return true
-        } else {
-            return false
-        }
+       
+        return reverse == s
         
     }
     
