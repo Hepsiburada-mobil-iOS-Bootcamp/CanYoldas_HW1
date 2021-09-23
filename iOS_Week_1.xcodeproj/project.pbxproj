@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1EDA307C26FD02710097C57F /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDA307B26FD02710097C57F /* Player.swift */; };
+		1EDA307E26FD02DD0097C57F /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDA307D26FD02DD0097C57F /* UserModel.swift */; };
+		1EDA308026FD05380097C57F /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDA307F26FD05380097C57F /* UserManager.swift */; };
 		A7CF0A4126F7BEBF0049FA45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CF0A4026F7BEBF0049FA45 /* AppDelegate.swift */; };
 		A7CF0A4326F7BEBF0049FA45 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CF0A4226F7BEBF0049FA45 /* SceneDelegate.swift */; };
 		A7CF0A4526F7BEBF0049FA45 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CF0A4426F7BEBF0049FA45 /* ViewController.swift */; };
@@ -42,6 +45,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1EDA307B26FD02710097C57F /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		1EDA307D26FD02DD0097C57F /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		1EDA307F26FD05380097C57F /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		A7CF0A3D26F7BEBF0049FA45 /* iOS_Week_1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_Week_1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7CF0A4026F7BEBF0049FA45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7CF0A4226F7BEBF0049FA45 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -151,6 +157,7 @@
 			children = (
 				A7CF0A7726F7C5EB0049FA45 /* AlgorithmManager.swift */,
 				A7CF0A7926F7C5F50049FA45 /* AlgorithmProtocol.swift */,
+				1EDA307F26FD05380097C57F /* UserManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -161,6 +168,8 @@
 				A7CF0A8026F7CECE0049FA45 /* SampleClass.swift */,
 				A7CF0A8226F7CED40049FA45 /* SampleStruct.swift */,
 				A7CF0A8426F7CFD60049FA45 /* SampleEnum.swift */,
+				1EDA307B26FD02710097C57F /* Player.swift */,
+				1EDA307D26FD02DD0097C57F /* UserModel.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -295,6 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EDA307C26FD02710097C57F /* Player.swift in Sources */,
 				A7CF0A7526F7C0680049FA45 /* AlgorithmViewController.swift in Sources */,
 				A7CF0A7826F7C5EB0049FA45 /* AlgorithmManager.swift in Sources */,
 				A7CF0A4526F7BEBF0049FA45 /* ViewController.swift in Sources */,
@@ -304,6 +314,8 @@
 				A7CF0A4126F7BEBF0049FA45 /* AppDelegate.swift in Sources */,
 				A7CF0A4326F7BEBF0049FA45 /* SceneDelegate.swift in Sources */,
 				A7CF0A8526F7CFD60049FA45 /* SampleEnum.swift in Sources */,
+				1EDA308026FD05380097C57F /* UserManager.swift in Sources */,
+				1EDA307E26FD02DD0097C57F /* UserModel.swift in Sources */,
 				A7CF0A7A26F7C5F50049FA45 /* AlgorithmProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

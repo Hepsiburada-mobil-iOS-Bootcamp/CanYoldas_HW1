@@ -8,9 +8,12 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var  userManager: UserManager!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        userManager = UserManager()
         // Do any additional setup after loading the view.
     }
 
@@ -27,6 +30,11 @@ class ViewController: UIViewController {
     @IBAction func basicsTest(_ sender: Any) {
         // please provide a couple of sample functionality for class, struct and enum use cases by creating your own modules. We provide you some sample class, enum and struct please provide your own.
         // The code below is just sample
+        let user1 = User(i: 1, u: "canyoldas", e: "c@gmail.com")
+        let player1 = Player(name: "Can", surname: "Yoldas")
+        userManager.getUserInfo(user1)
+        
+        
         let structObj = SampleStruct(title: "title", subTitle: "subTitle")
         let classObj = SampleClass(name: "name", surName: "surname").setTitleObject(by: structObj)
         classObj.display()

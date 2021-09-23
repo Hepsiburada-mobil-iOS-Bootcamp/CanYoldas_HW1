@@ -31,7 +31,7 @@ class AlgorithmManager: AlgorithmProtocol {
         for i in 0..<nums.count {
             
             let el = target - nums[i]
-            for j in i..<nums.count {
+            for j in i+1..<nums.count {
                 if nums[j] == el {
                     return [i,j]
                 }
