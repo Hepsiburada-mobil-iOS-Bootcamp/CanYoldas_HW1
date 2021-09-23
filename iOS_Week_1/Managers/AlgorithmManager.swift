@@ -93,8 +93,9 @@ class AlgorithmManager: AlgorithmProtocol {
     }
     
     func containsDuplicate(_ nums: [Int]) -> Bool {
-        let set = Set(nums)
         //creating a set removes duplicated elements
+        let set = Set(nums)
+        //if there are duplicated elements, count of set must be different than array's count
         return set.count != nums.count
     }
     
@@ -119,6 +120,8 @@ class AlgorithmManager: AlgorithmProtocol {
     private func merge(_ nums1: inout [Int], _ m: Int, _ nums2: [Int], _ n: Int) {
         //n parameter is unnecessary
         for i in 0..<nums2.count {
+            //the new elements for nums1 should be starting at the index m-n
+            //m-n = origin point to start the loop(where zeros start)
             nums1[nums1.count - nums2.count + i] = nums2[i]
         }
         
@@ -139,11 +142,14 @@ class AlgorithmManager: AlgorithmProtocol {
     }
     
     func intersect(_ nums1: [Int], _ nums2: [Int]) -> [Int] {
-        
+        //result array
         var result: [Int] = []
         for i in nums1 {
+            //for each el in nums1 we check if nums2 has it
+            
             for j in nums2 {
                 if i == j {
+                    //adding intersection element
                     result.append(j)
                     break
                 }
@@ -169,12 +175,19 @@ class AlgorithmManager: AlgorithmProtocol {
     private func missingNumber(_ nums: [Int]) -> Int {
         // if next value is not equal to current value + 1 , return current value + 1
         let ar = nums.sorted()
+        
+        //last index is not needed
         for i in 0..<ar.count - 1  {
             
+            // in [0,1,3,4]
+            //ar[i+1] = 3
+            //ar[i] = 1
+            // 1 + 1 = 2 is not in the array so we return that value
             if ar[i+1] != ar[i] + 1 {
                 return ar[i] + 1
             }
         }
+        //return int 
         return Int()
     }
     
