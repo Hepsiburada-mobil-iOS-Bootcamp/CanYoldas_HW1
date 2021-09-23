@@ -24,7 +24,7 @@ class AlgorithmViewController: UIViewController {
     }
     
     @IBAction func twoSumAction(_ sender: Any) {
-        // algorithmManager.twoSumTest()
+        algorithmManager.twoSumTest()
     }
     
     @IBAction func isPalindromAction(_ sender: Any) {
@@ -40,15 +40,15 @@ class AlgorithmViewController: UIViewController {
     }
     
     @IBAction func mergeArrayAction(_ sender: Any) {
-        // call required test function
+        algorithmManager.mergeArraysTest()
     }
     
     @IBAction func missingNumberAction(_ sender: Any) {
-        // call required test function
+        algorithmManager.missingNumberTest()
     }
     
     @IBAction func arrayIntersectionAction(_ sender: Any) {
-        // call required test function
+        algorithmManager.arrayIntersectionTest()
     }
     
 }

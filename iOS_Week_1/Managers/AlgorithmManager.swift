@@ -27,9 +27,16 @@ class AlgorithmManager: AlgorithmProtocol {
     }
     
     private func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
-        // task2 is added
-        // I solved of the question for you guys :D :D :D
-        // task1
+        
+        for i in 0..<nums.count {
+            
+            let el = target - nums[i]
+            for j in i..<nums.count {
+                if nums[j] == el {
+                    return [i,j]
+                }
+            }
+        }
         return [0, 1]
     }
     
@@ -107,10 +114,18 @@ class AlgorithmManager: AlgorithmProtocol {
      The result of the merge is [1,2,2,3,5,6] with the underlined elements coming from nums1.
      */
     func mergeArraysTest() {
-        
+        var nums1 = [1,2,3,0,0,0]
+        let nums2 = [2,5,6,0,0]
+        merge(&nums1, nums1.count, nums2, nums2.count)
     }
     
     private func merge(_ nums1: inout [Int], _ m: Int, _ nums2: [Int], _ n: Int) {
+        //n parameter is unnecessary
+        for i in 0..<nums2.count {
+            nums1[nums1.count - nums2.count + i] = nums2[i]
+        }
+        
+        
         
     }
     
@@ -126,20 +141,19 @@ class AlgorithmManager: AlgorithmProtocol {
         print("result : \(result)")
     }
     
-        func intersect(_ nums1: [Int], _ nums2: [Int]) -> [Int] {
-    
-            var result: [Int] = []
-            for i in nums1 {
-                for j in nums2 {
-                    if i == j {
-                        result.append(j)
-                        break
-                    }
+    func intersect(_ nums1: [Int], _ nums2: [Int]) -> [Int] {
+        
+        var result: [Int] = []
+        for i in nums1 {
+            for j in nums2 {
+                if i == j {
+                    result.append(j)
+                    break
                 }
             }
-            
-            return result
         }
+        return result
+    }
     
     // MARK: - Missing Number
     /*
