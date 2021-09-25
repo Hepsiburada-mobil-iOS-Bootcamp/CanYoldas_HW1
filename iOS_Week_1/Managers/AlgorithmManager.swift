@@ -58,7 +58,8 @@ class AlgorithmManager: AlgorithmProtocol {
         //replacingOccurrences removes other characters which are not in A-Z
         let reverse = String(s.lowercased().replacingOccurrences(of: "[^a-z]+", with: "",options: .regularExpression).reversed())
        
-        return reverse == s
+        //lowercased fixed
+        return reverse == s.lowercased()
         
     }
     
@@ -113,8 +114,10 @@ class AlgorithmManager: AlgorithmProtocol {
      */
     func mergeArraysTest() {
         var nums1 = [1,2,3,0,0,0]
-        let nums2 = [2,5,6,0,0]
+        // number of elements should be equal to nums1.count
+        let nums2 = [2,5,6]
         merge(&nums1, nums1.count, nums2, nums2.count)
+        print(nums1)
     }
     
     private func merge(_ nums1: inout [Int], _ m: Int, _ nums2: [Int], _ n: Int) {
